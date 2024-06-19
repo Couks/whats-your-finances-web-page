@@ -26,7 +26,7 @@
       }
     </style>
   </head>
-  <body class="bg-gray-100 text-secondary-800">
+  <body class="bg-transparent">
     <!-- Navbar -->
     <nav class="bg-white fixed w-full top-0 shadow-lg">
       <div class="flex justify-between items-center py-2 px-4 md:px-12">
@@ -37,7 +37,7 @@
             class="size-16 rounded-full"
           />
           <span
-            class="text-primary-600 text-md md:text-2xl font-semibold w-32 md:w-full"
+            class="text-primary-500 text-xl md:text-2xl font-semibold w-32 md:w-full"
           >
             What's Your Finances
           </span>
@@ -72,23 +72,23 @@
       </div>
     </nav>
 
-    <div class="flex-col">
+    <div class="w-full h-full">
       <!-- Home Section -->
       <section
         id="home"
-        class="flex-col bg-white py-12 px-4 md:px-12 mt-16 rounded-lg items-center gap-4"
+        class="container mx-auto flex-col bg-white py-12 px-4 md:px-12 mt-16 rounded-lg items-center"
       >
-        <div class="container mx-auto flex items-center justify-between">
+        <div class="flex container items-center justify-center ">
           <img
-            src="/assets/phone.png"
+            src="/assets/phone-user.png"
             alt="Brenda"
-            class="w-1/3 md:w-60 rounded-full"
+            class="w-40 md:w-1/3 rounded-full"
           />
-          <div class="text-right w-2/3">
-            <h1 class="text-2xl md:text-4xl font-bold text-primary-500">
+          <div class="text-right md:w-1/3">
+            <h1 class="text-2xl md:text-5xl font-bold text-primary-500">
               What's Your Finances
             </h1>
-            <p class="text-md md:text-xl mt-4">
+            <p class="text-md md:text-2xl mt-4">
               Gerencie suas finanças com facilidade usando o aplicativo mais
               popular do Brasil
             </p>
@@ -107,13 +107,14 @@
 
       <!-- Problema Section -->
       <section id="problema" class="bg-primary-500 py-12 px-4 md:px-12">
-        <div class="container mx-auto">
+        <div class="container mx-auto text-left">
           <h2 class="text-3xl font-bold text-white">O Problema</h2>
+          <p class="text-xl">Quais são as principais dores?</p>
           <div
             class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-8 mt-8"
           >
             <div class="bg-white p-6 rounded-lg shadow-lg">
-              <h3 class="text-xl font-semibold text-secondary-700">
+              <h3 class="text-xl font-semibold text-secondary-800">
                 Mais endividados
               </h3>
               <p class="mt-4">
@@ -122,7 +123,7 @@
               </p>
             </div>
             <div class="bg-white p-6 rounded-lg shadow-lg">
-              <h3 class="text-xl font-semibold text-secondary-700">
+              <h3 class="text-xl font-semibold text-secondary-800">
                 Menos controle financeiro
               </h3>
               <p class="mt-4">
@@ -131,7 +132,7 @@
               </p>
             </div>
             <div class="bg-white p-6 rounded-lg shadow-lg">
-              <h3 class="text-xl font-semibold text-secondary-700">
+              <h3 class="text-xl font-semibold text-secondary-800">
                 Praticidade na gestão
               </h3>
               <p class="mt-4">
@@ -140,7 +141,7 @@
               </p>
             </div>
             <div class="bg-white p-6 rounded-lg shadow-lg">
-              <h3 class="text-xl font-semibold text-secondary-700">
+              <h3 class="text-xl font-semibold text-secondary-800">
                 Complexidade
               </h3>
               <p class="mt-4">
@@ -149,7 +150,7 @@
               </p>
             </div>
             <div class="bg-white p-6 rounded-lg shadow-lg">
-              <h3 class="text-xl font-semibold text-secondary-700">
+              <h3 class="text-xl font-semibold text-secondary-800">
                 Usabilidade
               </h3>
               <p class="mt-4">
@@ -158,7 +159,7 @@
               </p>
             </div>
             <div class="bg-white p-6 rounded-lg shadow-lg">
-              <h3 class="text-xl font-semibold text-secondary-700">Tempo</h3>
+              <h3 class="text-xl font-semibold text-secondary-800">Tempo</h3>
               <p class="mt-4">
                 O esforço para inserir dados manualmente geralmente é visto como
                 uma tarefa árdua e desanimadora.
@@ -169,28 +170,29 @@
       </section>
 
       <!-- Solução Section -->
-      <section id="solucao" class="bg-white py-12 px-4 md:px-12">
-        <div class="container mx-auto">
-          <h2 class="text-3xl font-bold text-primary-500">A Solução</h2>
-          <p class="text-xl">
-            Como tornar mais fácil a anotação dos seus gastos?
-          </p>
-          <div class="mt-8 max-w-2xl mx-auto">
-            <p class="mt-4">
-              Segundo alguns dados do Datafolha, 147 milhões de brasileiros
-              utilizam o WhatsApp, correspondendo a 99% dos brasileiros online.
-              Além disso, 38% dos entrevistados afirmam que a principal ação
-              preventiva para a saúde financeira é poupar.
-            </p>
-            <p class="mt-4 font-semibold">
-              Assim surge o What's your Finance! A sua IA financeira.
-            </p>
-            <p class="mt-4">
-              Recebemos suas movimentações e organizamos para você! Com apenas
-              uma mensagem de texto, áudio ou foto, a nossa IA entende sua
-              movimentação e registra no nosso aplicativo para você consultar
-              quando e onde quiser.
-            </p>
+      <section id="solucao" class="bg-gray-100 py-12 px-4 md:px-12">
+        <div class="container mx-auto items-center justify-center gap-8 ">
+          <div class="text-center"><h2 class="text-3xl font-bold text-primary-500">A Solução</h2>
+            <p class="text-xl">
+              Observando essas dores, surge o What's your Finance! A sua IA
+              financeira.
+            </p></div>
+         
+          
+            <div class="flex justify-center items-center mt-4 text-right">
+              <img
+                src="/assets/solution.png"
+                alt="Brenda"
+                class="w-32 md:w-60 rounded-full"
+              />
+              <p class="text-secondary-800 md:w-1/3">
+                Recebemos suas movimentações e organizamos para você! Com apenas
+                uma mensagem de texto, áudio ou foto, a nossa IA entende sua
+                movimentação e registra no nosso aplicativo para você consultar
+                quando e onde quiser.
+              </p>
+            </div>
+             
           </div>
         </div>
       </section>
@@ -209,7 +211,7 @@
                 alt="Pedro"
                 class="size-32 md:size-60 mx-auto rounded-full"
               />
-              <h3 class="text-xl font-semibold text-secondary-700 mt-4">
+              <h3 class="text-xl font-semibold text-secondary-800 mt-4">
                 Pedro
               </h3>
               <p class="mt-2">Desenvolvedor Backend</p>
@@ -220,7 +222,7 @@
                 alt="Matheus"
                 class="size-32 md:size-60 mx-auto rounded-full"
               />
-              <h3 class="text-xl font-semibold text-secondary-700 mt-4">
+              <h3 class="text-xl font-semibold text-secondary-800 mt-4">
                 Matheus
               </h3>
               <p class="mt-2">Desenvolvedor Frontend</p>
@@ -231,7 +233,7 @@
                 alt="Wellington"
                 class="size-32 md:size-60 mx-auto rounded-full"
               />
-              <h3 class="text-xl font-semibold text-secondary-700 mt-4">
+              <h3 class="text-xl font-semibold text-secondary-800 mt-4">
                 Wellington
               </h3>
               <p class="mt-2">Designer e Tester</p>
@@ -242,7 +244,7 @@
                 alt="Brenda"
                 class="size-32 md:size-60 mx-auto rounded-full"
               />
-              <h3 class="text-xl font-semibold text-secondary-700 mt-4">
+              <h3 class="text-xl font-semibold text-secondary-800 mt-4">
                 Brenda
               </h3>
               <p class="mt-2">Designer e Tester</p>
