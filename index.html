@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>What's Your Finances</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      crossorigin="anonymous"
+    />
+
+    <style>
+      * {
+        font-family: Inter, sans-serif;
+      }
+      html {
+        scroll-behavior: smooth;
+      }
+      ::-webkit-scrollbar {
+        width: 1px;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: transparent;
+      }
+    </style>
+  </head>
+  <body class="bg-gray-100 text-secondary-800">
+    <!-- Navbar -->
+    <nav class="bg-white fixed w-full top-0 shadow-lg">
+      <div class="flex justify-between items-center py-2 px-4 md:px-12">
+        <div class="flex justify-center items-center gap-2">
+          <img
+            src="/assets/logo.png"
+            alt="Brenda"
+            class="size-16 rounded-full"
+          />
+          <span
+            class="text-primary-600 text-md md:text-2xl font-semibold w-32 md:w-full"
+          >
+            What's Your Finances
+          </span>
+        </div>
+
+        <div class="flex gap-6">
+          <a
+            href="#home"
+            class="text-secondary-800 flex gap-2 items-center hover:text-primary-500"
+            ><i class="fa-solid fa-house"></i
+            ><span class="hidden md:block mr-2">Home</span></a
+          >
+          <a
+            href="#problema"
+            class="text-secondary-800 flex gap-2 items-center hover:text-primary-500"
+            ><i class="fa-solid fa-bug"></i
+            ><span class="hidden md:block mr-2">Problema</span></a
+          >
+          <a
+            href="#solucao"
+            class="text-secondary-800 flex gap-2 items-center hover:text-primary-500"
+            ><i class="fa-solid fa-lightbulb"></i
+            ><span class="hidden md:block mr-2">Solução</span></a
+          >
+          <a
+            href="#equipe"
+            class="text-secondary-800 flex gap-2 items-center hover:text-primary-500"
+            ><i class="fa-solid fa-user-group"></i
+            ><span class="hidden md:block mr-2">Equipe</span></a
+          >
+        </div>
+      </div>
+    </nav>
+
+    <div class="flex-col">
+      <!-- Home Section -->
+      <section
+        id="home"
+        class="flex flex-col bg-white py-12 px-4 md:px-12 mt-16 rounded-lg items-center gap-4"
+      >
+        <div class="flex items-center justify-between">
+          <img src="/assets/phone.png" alt="Brenda" class="w-60 rounded-full" />
+          <div class="text-right">
+            <h1 class="text-4xl font-bold text-primary-500">
+              What's Your Finances
+            </h1>
+            <p class="text-xl mt-4">
+              Gerencie suas finanças com facilidade usando o aplicativo mais
+              popular do Brasil
+            </p>
+          </div>
+        </div>
+        <div>
+          <a
+            href="URL_DO_DOWNLOAD"
+            class="w-60 mt-8 bg-primary-500 text-white py-3 px-6 rounded-full hover:bg-primary-700 transition animation-pulse"
+            >Baixe Agora</a
+          >
+        </div>
+      </section>
+
+      <!-- Problema Section -->
+      <section id="problema" class="bg-primary-500 py-12 px-4 md:px-12">
+        <div class="container mx-auto">
+          <h2 class="text-3xl font-bold text-white">O Problema</h2>
+          <div
+            class="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-8 mt-8"
+          >
+            <div class="bg-white p-6 rounded-lg shadow-lg">
+              <h3 class="text-xl font-semibold text-secondary-700">
+                Mais endividados
+              </h3>
+              <p class="mt-4">
+                Mais de 66 milhões de pessoas enfrentam o desafio de ter o nome
+                negativado.
+              </p>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-lg">
+              <h3 class="text-xl font-semibold text-secondary-700">
+                Menos controle financeiro
+              </h3>
+              <p class="mt-4">
+                29% admitem já ter sido negativados por falta de pagamento da
+                fatura do cartão.
+              </p>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-lg">
+              <h3 class="text-xl font-semibold text-secondary-700">
+                Praticidade na gestão
+              </h3>
+              <p class="mt-4">
+                Brasileiros têm conhecimento mínimo sobre como controlar suas
+                finanças, mas falham na prática.
+              </p>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-lg">
+              <h3 class="text-xl font-semibold text-secondary-700">
+                Complexidade
+              </h3>
+              <p class="mt-4">
+                Grande parte dos usuários acham os aplicativos muito complicados
+                ou com uma curva de aprendizado desafiadora.
+              </p>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-lg">
+              <h3 class="text-xl font-semibold text-secondary-700">
+                Usabilidade
+              </h3>
+              <p class="mt-4">
+                Geralmente o design do aplicativo não é intuitivo ou a interface
+                é difícil de navegar, levando à desistência.
+              </p>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-lg">
+              <h3 class="text-xl font-semibold text-secondary-700">Tempo</h3>
+              <p class="mt-4">
+                O esforço para inserir dados manualmente geralmente é visto como
+                uma tarefa árdua e desanimadora.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Solução Section -->
+      <section id="solucao" class="bg-white py-12 px-4 md:px-12">
+        <div class="container mx-auto">
+          <h2 class="text-3xl font-bold text-primary-500">A Solução</h2>
+          <p class="text-xl mt-4">
+            Como tornar mais fácil a anotação dos seus gastos?
+          </p>
+          <div class="mt-8 max-w-2xl mx-auto">
+            <p class="mt-4">
+              Segundo alguns dados do Datafolha, 147 milhões de brasileiros
+              utilizam o WhatsApp, correspondendo a 99% dos brasileiros online.
+              Além disso, 38% dos entrevistados afirmam que a principal ação
+              preventiva para a saúde financeira é poupar.
+            </p>
+            <p class="mt-4 font-semibold">
+              Assim surge o What's your Finance! A sua IA financeira.
+            </p>
+            <p class="mt-4">
+              Recebemos suas movimentações e organizamos para você! Com apenas
+              uma mensagem de texto, áudio ou foto, a nossa IA entende sua
+              movimentação e registra no nosso aplicativo para você consultar
+              quando e onde quiser.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Equipe Section -->
+      <section id="equipe" class="bg-primary-500 py-12 px-4 md:px-12">
+        <div class="container mx-auto">
+          <h2 class="text-3xl font-bold text-white">Nosso time</h2>
+          <p class="text-xl mt-4 text-secondary-100">Conheça nosso time</p>
+          <div
+            class="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-2 md:gap-8 mt-8 text-center"
+          >
+            <div class="bg-white p-4 rounded-lg shadow-lg">
+              <img
+                src="/assets/pedro.jpg"
+                alt="Pedro"
+                class="size-32 md:size-60 mx-auto rounded-full"
+              />
+              <h3 class="text-xl font-semibold text-secondary-700 mt-4">
+                Pedro
+              </h3>
+              <p class="mt-2">Desenvolvedor Backend</p>
+            </div>
+            <div class="bg-white p-4 rounded-lg shadow-lg">
+              <img
+                src="/assets/matheus.jpg"
+                alt="Matheus"
+                class="size-32 md:size-60 mx-auto rounded-full"
+              />
+              <h3 class="text-xl font-semibold text-secondary-700 mt-4">
+                Matheus
+              </h3>
+              <p class="mt-2">Desenvolvedor Frontend</p>
+            </div>
+            <div class="bg-white p-4 rounded-lg shadow-lg">
+              <img
+                src="/assets/wellington.png"
+                alt="Wellington"
+                class="size-32 md:size-60 mx-auto rounded-full"
+              />
+              <h3 class="text-xl font-semibold text-secondary-700 mt-4">
+                Wellington
+              </h3>
+              <p class="mt-2">Designer e Tester</p>
+            </div>
+            <div class="bg-white p-4 rounded-lg shadow-lg">
+              <img
+                src="/assets/brenda.jpg"
+                alt="Brenda"
+                class="size-32 md:size-60 mx-auto rounded-full"
+              />
+              <h3 class="text-xl font-semibold text-secondary-700 mt-4">
+                Brenda
+              </h3>
+              <p class="mt-2">Designer e Tester</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </body>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: {
+              100: "#F1FFF3",
+              200: "#DFF7E2",
+              300: "#99ecd8",
+              500: "#00D09E",
+              600: "#00B17F",
+              700: "#004F3E",
+              800: "#052224",
+              900: "#031416",
+            },
+
+            secondary: {
+              200: "#9F5FED",
+              300: "#8650C7",
+              400: "#6D41A1",
+              500: "#47286C",
+              600: "#2E1C56",
+              800: "#2E1A46",
+              900: "#150C20",
+            },
+          },
+        },
+      },
+    };
+  </script>
+</html>
