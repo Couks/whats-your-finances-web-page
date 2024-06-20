@@ -49,7 +49,7 @@
 
     .swiper {
       width: 100%;
-      padding: 2rem 0;
+      padding: 3rem 0;
     }
 
     .swiper-slide {
@@ -152,7 +152,7 @@
         <div class="w-full flex container mx-auto items-center justify-center">
           <img
             src="/assets/phone-user.png"
-            alt="Brenda"
+            alt="phone user"
             class="w-1/2 lg:w-96 rounded-full"
           />
           <div class="text-right w-1/2">
@@ -199,7 +199,9 @@
             <div
               class="bg-primary-100 hover:bg-white transition p-6 rounded-3xl shadow-lg dark:shadow-inner"
             >
-              <h3 class="text-xl font-semibold text-secondary-800">
+              <h3
+                class="text-xl font-semibold text-secondary-800 dark:text-primary-500"
+              >
                 Mais endividados
               </h3>
               <p class="mt-4">
@@ -210,7 +212,9 @@
             <div
               class="bg-primary-100 hover:bg-white transition p-6 rounded-3xl shadow-lg dark:shadow-inner"
             >
-              <h3 class="text-xl font-semibold text-secondary-800">
+              <h3
+                class="text-xl font-semibold text-secondary-800 dark:text-primary-500"
+              >
                 Menos controle financeiro
               </h3>
               <p class="mt-4">
@@ -221,7 +225,9 @@
             <div
               class="bg-primary-100 hover:bg-white transition p-6 rounded-3xl shadow-lg dark:shadow-inner"
             >
-              <h3 class="text-xl font-semibold text-secondary-800">
+              <h3
+                class="text-xl font-semibold text-secondary-800 dark:text-primary-500"
+              >
                 Praticidade na gestão
               </h3>
               <p class="mt-4">
@@ -232,7 +238,9 @@
             <div
               class="bg-primary-100 hover:bg-white transition p-6 rounded-3xl shadow-lg dark:shadow-inner"
             >
-              <h3 class="text-xl font-semibold text-secondary-800">
+              <h3
+                class="text-xl font-semibold text-secondary-800 dark:text-primary-500"
+              >
                 Complexidade
               </h3>
               <p class="mt-4">
@@ -243,7 +251,9 @@
             <div
               class="bg-primary-100 hover:bg-white transition p-6 rounded-3xl shadow-lg dark:shadow-inner"
             >
-              <h3 class="text-xl font-semibold text-secondary-800">
+              <h3
+                class="text-xl font-semibold text-secondary-800 dark:text-primary-500"
+              >
                 Usabilidade
               </h3>
               <p class="mt-4">
@@ -254,7 +264,11 @@
             <div
               class="bg-primary-100 hover:bg-white transition p-6 rounded-3xl shadow-lg dark:shadow-inner"
             >
-              <h3 class="text-xl font-semibold text-secondary-800">Tempo</h3>
+              <h3
+                class="text-xl font-semibold text-secondary-800 dark:text-primary-500"
+              >
+                Tempo
+              </h3>
               <p class="mt-4">
                 O esforço para inserir dados manualmente geralmente é visto como
                 uma tarefa árdua e desanimadora.
@@ -314,7 +328,7 @@
             <div class="swiper-wrapper">
               <!-- Slide 1 -->
               <div class="swiper-slide">
-                <div class="bg-white p-6 rounded-3xl shadow-2xl">
+                <div class="bg-white p-6 rounded-3xl shadow-xl">
                   <h4 class="text-xl font-bold text-primary-500">
                     Praticidade no envio de dados
                   </h4>
@@ -326,7 +340,7 @@
               </div>
               <!-- Slide 2 -->
               <div class="swiper-slide">
-                <div class="bg-white p-6 rounded-3xl shadow-2xl">
+                <div class="bg-white p-6 rounded-3xl shadow-xl">
                   <h4 class="text-xl font-bold text-primary-500">
                     Resumo das atividades
                   </h4>
@@ -338,7 +352,7 @@
               </div>
               <!-- Slide 3 -->
               <div class="swiper-slide">
-                <div class="bg-white p-6 rounded-3xl shadow-2xl">
+                <div class="bg-white p-6 rounded-3xl shadow-xl">
                   <h4 class="text-xl font-bold text-primary-500">
                     Controle de gastos
                   </h4>
@@ -379,7 +393,7 @@
               <img
                 src="/assets/pedro.jpg"
                 alt="Pedro"
-                class="mx-auto rounded-full"
+                class="mx-auto rounded-full w-full h-auto"
               />
               <h3
                 class="text-xl font-semibold text-secondary-800 dark:text-primary-500 mt-4"
@@ -396,7 +410,7 @@
               <img
                 src="/assets/matheus.jpg"
                 alt="Matheus"
-                class="mx-auto rounded-full"
+                class="mx-auto rounded-full w-full h-auto"
               />
               <h3
                 class="text-xl font-semibold text-secondary-800 dark:text-primary-500 mt-4"
@@ -413,7 +427,7 @@
               <img
                 src="/assets/wellington.png"
                 alt="Wellington"
-                class="mx-auto rounded-full"
+                class="mx-auto rounded-full w-full h-auto"
               />
               <h3
                 class="text-xl font-semibold text-secondary-800 dark:text-primary-500 mt-4"
@@ -430,7 +444,7 @@
               <img
                 src="/assets/brenda.jpg"
                 alt="Brenda"
-                class="mx-auto rounded-full"
+                class="mx-auto rounded-full w-full h-auto"
               />
               <h3
                 class="text-xl font-semibold text-secondary-800 dark:text-primary-500 mt-4"
@@ -484,12 +498,14 @@
     <!-- Cookie Consent Popup -->
     <div
       id="cookieConsent"
-      class="fixed bottom-0 left-0 w-full bg-primary-500 text-primary-200 p-4 shadow-lg z-50 hidden"
+      class="fixed bottom-0 left-0 w-full bg-primary-500 dark:bg-secondary-800 p-4 shadow-lg z-50 hidden"
     >
       <div
         class="container mx-auto flex flex-col lg:flex-row justify-between items-center"
       >
-        <p class="text-sm lg:text-base">
+        <p
+          class="text-sm lg:text-base text-secondary-800 dark:text-primary-100"
+        >
           Este site usa cookies para melhorar a experiência do usuário.
           <a href="/privacy-policy" class="underline">Leia mais</a>.
         </p>
