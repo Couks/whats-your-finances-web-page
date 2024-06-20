@@ -1,35 +1,13 @@
 <!DOCTYPE html>
 <html lang="pt-br">
   <head>
-    <script>
-      (function (w, d, s, l, i) {
-        w[l] = w[l] || [];
-        w[l].push({
-          "gtm.start": new Date().getTime(),
-          event: "gtm.js",
-        });
-        var f = d.getElementsByTagName(s)[0],
-          j = d.createElement(s),
-          dl = l != "dataLayer" ? "&l=" + l : "";
-        j.async = true;
-        j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
-        f.parentNode.insertBefore(j, f);
-      })(window, document, "script", "dataLayer", "GTM-K5XMDN7J");
-    </script>
-    <!-- Google tag (gtag.js) -->
+    <script src="scripts/google.js"></script>
     <script
       async
       src="https://www.googletagmanager.com/gtag/js?id=G-FY4CFN7VWX"
     ></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-      gtag("js", new Date());
+    <script src="https://cdn.tailwindcss.com"></script>
 
-      gtag("config", "G-FY4CFN7VWX");
-    </script>
     <meta charset="UTF-8" />
     <meta
       name="viewport"
@@ -41,7 +19,7 @@
       name="description"
       content="Gerencie suas finanças com facilidade usando o aplicativo mais popular do Brasil"
     />
-    <script src="https://cdn.tailwindcss.com"></script>
+
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
@@ -503,6 +481,35 @@
         </div>
       </section>
     </main>
+    <!-- Cookie Consent Popup -->
+    <div
+      id="cookieConsent"
+      class="fixed bottom-0 left-0 w-full bg-primary-500 text-primary-200 p-4 shadow-lg z-50 hidden"
+    >
+      <div
+        class="container mx-auto flex flex-col lg:flex-row justify-between items-center"
+      >
+        <p class="text-sm lg:text-base">
+          Este site usa cookies para melhorar a experiência do usuário.
+          <a href="/privacy-policy" class="underline">Leia mais</a>.
+        </p>
+        <div class="flex gap-2 mt-2 lg:mt-0">
+          <button
+            id="acceptCookies"
+            class="bg-primary-700 hover:bg-primary-900 text-white px-4 py-2 rounded-lg"
+          >
+            Aceitar
+          </button>
+          <button
+            id="declineCookies"
+            class="bg-secondary-500 hover:bg-secondary-700 text-white px-4 py-2 rounded-lg"
+          >
+            Recusar
+          </button>
+        </div>
+      </div>
+    </div>
+
     <footer class="bg-primary-200 dark:bg-secondary-900 py-6 rounded-t-3xl">
       <div
         class="container mx-auto px-4 lg:px-12 flex flex-col lg:flex-row justify-between items-center"
@@ -551,49 +558,8 @@
       </div>
     </footer>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="/scripts/tailwindconfig.js"></script>
+    <script src="/scripts/swiper.js"></script>
+    <script src="/scripts/cookie.js"></script>
   </body>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            primary: {
-              100: "#F1FFF3",
-              200: "#DFF7E2",
-              300: "#99ecd8",
-              500: "#00D09E",
-              600: "#00B17F",
-              700: "#004F3E",
-              800: "#052224",
-              900: "#031416",
-            },
-
-            secondary: {
-              200: "#9F5FED",
-              300: "#8650C7",
-              400: "#6D41A1",
-              500: "#47286C",
-              600: "#2E1C56",
-              800: "#2E1A46",
-              900: "#150C20",
-            },
-          },
-        },
-      },
-    };
-  </script>
-  <script>
-    var swiper = new Swiper(".solutionSwiper", {
-      autoplay: {
-        delay: 1000,
-      },
-      effect: "coverflow",
-      coverflowEffect: { slideShadows: false },
-      speed: 5000,
-      pagination: {
-        el: ".swiper-pagination",
-        clickable: true,
-      },
-    });
-  </script>
 </html>
