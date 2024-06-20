@@ -1,313 +1,298 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>What's Your Finances</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
-      crossorigin="anonymous"
-    />
 
-    <style>
-      * {
-        font-family: Inter, sans-serif;
-      }
-      html {
-        scroll-behavior: smooth;
-      }
-      ::-webkit-scrollbar {
-        width: 1px;
-      }
-      ::-webkit-scrollbar-thumb {
-        background: transparent;
-      }
-    </style>
-  </head>
-  <body>
-    <!-- Navbar -->
-    <nav class="bg-white dark:bg-secondary-800 fixed w-full top-0 shadow-lg">
-      <div class="flex justify-between items-center py-2 px-4 md:px-12">
-        <div class="flex justify-center items-center gap-1">
-          <img
-            src="/assets/logo.png"
-            alt="Brenda"
-            class="size-16 rounded-full"
-          />
-          <span
-            class="text-primary-500 text-md md:text-2xl font-semibold w-32 md:w-full"
-          >
-            What's Your Finances
-          </span>
-        </div>
+<head>
+  <script>(function (w, d, s, l, i) {
+      w[l] = w[l] || []; w[l].push({
+        'gtm.start':
+          new Date().getTime(), event: 'gtm.js'
+      }); var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+          'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-K5XMDN7J');</script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>What's Your Finances</title>
+  <script src="https://cdn.tailwindcss.com"></script>
 
-        <div class="flex gap-6">
-          <a
-            href="#home"
-            class="text-secondary-800 dark:text-white flex gap-2 items-center hover:text-primary-500"
-            ><i class="fa-solid fa-house text-secondary-800 dark:text-primary-500 dark:hover:text-white"></i
-            ><span class="hidden md:block mr-2">Home</span></a
-          >
-          <a
-            href="#problema"
-            class="text-secondary-800 dark:text-white flex gap-2 items-center hover:text-primary-500"
-            ><i class="fa-solid fa-bug text-secondary-800 dark:text-primary-500 dark:hover:text-white"></i
-            ><span class="hidden md:block mr-2">Problema</span></a
-          >
-          <a
-            href="#solucao"
-            class="text-secondary-800 dark:text-white flex gap-2 items-center hover:text-primary-500"
-            ><i class="fa-solid fa-lightbulb text-secondary-800 dark:text-primary-500 dark:hover:text-white"></i
-            ><span class="hidden md:block mr-2">Solução</span></a
-          >
-          <a
-            href="#equipe"
-            class="text-secondary-800 dark:text-white flex gap-2 items-center hover:text-primary-500"
-            ><i class="fa-solid fa-user-group text-secondary-800 dark:text-primary-500 dark:hover:text-white"></i
-            ><span class="hidden md:block mr-2">Equipe</span></a
-          >
-        </div>
+
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    crossorigin="anonymous" />
+
+  <style>
+    * {
+      font-family: Inter, sans-serif;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    ::-webkit-scrollbar {
+      width: 1px;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background: transparent;
+    }
+  </style>
+</head>
+
+<body>
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K5XMDN7J" height="0" width="0"
+      style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- Navbar -->
+  <nav class="bg-white dark:bg-secondary-800 fixed w-full top-0 shadow-lg">
+    <div class="flex justify-between items-center py-2 px-4 md:px-12">
+      <div class="flex justify-center items-center gap-1">
+        <img src="/assets/logo.png" alt="Brenda" class="size-16 rounded-full" />
+        <span class="text-primary-500 text-md md:text-2xl font-semibold w-32 md:w-full">
+          What's Your Finances
+        </span>
       </div>
-    </nav>
 
-    <div class="flex flex-col flex-1">
-      <!-- Home Section -->
-      <section
-        id="home"
-        class="flex-col bg-white dark:bg-primary-800 py-12 px-4 md:px-12 mt-16 items-center"
-      >
-        <div class="w-full flex container items-center justify-center ">
-          <img
-            src="/assets/phone-user.png"
-            alt="Brenda"
-            class="w-1/2 md:w-96 rounded-full"
-          />
-          <div class="text-right w-1/2">
-            <h1 class="text-2xl md:text-5xl font-bold text-primary-500">
-              What's Your Finances
-            </h1>
-            <p class="text-md md:text-2xl mt-4 text-secondary-800 dark:text-white">
-              Gerencie suas finanças com facilidade usando o aplicativo mais
-              popular do Brasil
-            </p>
-            <a
-              href="https://drive.google.com/file/d/18xsXkNvhYpic9NmG2zLvzG7lVTnqPy9E/view?usp=sharing"
-              ><button
-                class="w-auto mt-8 bg-primary-500 text-white hover:text-white py-3 px-6 rounded-full hover:bg-primary-700 transition animation-pulse"
-              >
-                Baixe Agora
-                <i class="fa-solid fa-download ml-2"></i></button
-            ></a>
-          </div>
-        </div>
-        <div></div>
-      </section>
-
-      <!-- Problema Section -->
-      <section id="problema" class="bg-primary-500 dark:bg-secondary-800 py-12 px-4 md:px-12">
-        <div class="container mx-auto text-left">
-          <h2 class="text-3xl font-bold text-white dark:text-primary-500">O Problema</h2>
-          <p class="text-xl font-semibold text-secondary-800 dark:text-white" >Quais são as principais dores?</p>
-          <div
-            class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-8 mt-8"
-          >
-            <div class="bg-white p-6 rounded-3xl shadow-lg dark:shadow-inner ">
-              <h3 class="text-xl font-semibold text-secondary-800">
-                Mais endividados
-              </h3>
-              <p class="mt-4">
-                Mais de 66 milhões de pessoas enfrentam o desafio de ter o nome
-                negativado.
-              </p>
-            </div>
-            <div class="bg-white p-6 rounded-3xl shadow-lg dark:shadow-inner">
-              <h3 class="text-xl font-semibold text-secondary-800">
-                Menos controle financeiro
-              </h3>
-              <p class="mt-4">
-                29% admitem já ter sido negativados por falta de pagamento da
-                fatura do cartão.
-              </p>
-            </div>
-            <div class="bg-white p-6 rounded-3xl shadow-lg dark:shadow-inner">
-              <h3 class="text-xl font-semibold text-secondary-800">
-                Praticidade na gestão
-              </h3>
-              <p class="mt-4">
-                Brasileiros têm conhecimento mínimo sobre como controlar suas
-                finanças, mas falham na prática.
-              </p>
-            </div>
-            <div class="bg-white p-6 rounded-3xl shadow-lg dark:shadow-inner">
-              <h3 class="text-xl font-semibold text-secondary-800">
-                Complexidade
-              </h3>
-              <p class="mt-4">
-                Grande parte dos usuários acham os aplicativos muito complicados
-                ou com uma curva de aprendizado desafiadora.
-              </p>
-            </div>
-            <div class="bg-white p-6 rounded-3xl shadow-lg dark:shadow-inner">
-              <h3 class="text-xl font-semibold text-secondary-800">
-                Usabilidade
-              </h3>
-              <p class="mt-4">
-                Geralmente o design do aplicativo não é intuitivo ou a interface
-                é difícil de navegar, levando à desistência.
-              </p>
-            </div>
-            <div class="bg-white p-6 rounded-3xl shadow-lg dark:shadow-inner">
-              <h3 class="text-xl font-semibold text-secondary-800">Tempo</h3>
-              <p class="mt-4">
-                O esforço para inserir dados manualmente geralmente é visto como
-                uma tarefa árdua e desanimadora.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Solução Section -->
-      <section id="solucao" class="bg-gray-100 dark:bg-primary-800 py-12 px-4 md:px-12">
-        <div class="container mx-auto items-center justify-center gap-8 ">
-          <div class="text-center"><h2 class="text-3xl font-bold text-primary-500">A Solução</h2>
-            <p class="text-xl dark:text-white">
-              Observando essas dores, surge o What's your Finance! A sua IA
-              financeira.
-            </p></div>
-         
-          
-            <div class="md:flex justify-center items-center mt-4 text-center">
-              <img
-                src="/assets/solution.png"
-                alt="Brenda"
-                class="w-full md:w-60 rounded-full"
-              />
-              <p class="text-secondary-800 dark:text-white md:w-1/3">
-                Recebemos suas movimentações e organizamos para você! <br><br>Com apenas
-                uma mensagem de texto, áudio ou foto, a nossa IA entende sua
-                movimentação e registra no nosso aplicativo para você consultar
-                quando e onde quiser.
-              </p>
-            </div>
-             
-          </div>
-        </div>
-      </section>
-
-      <!-- Equipe Section -->
-      <section id="equipe" class="bg-primary-500 dark:bg-secondary-800 py-12 px-4 md:px-12">
-        <div class="container mx-auto">
-          <h2 class="text-3xl font-bold text-white dark:text-primary-500">Nosso time</h2>
-          <p class="text-xl text-secondary-100 dark:text-white">Conheça nosso time</p>
-          <div
-            class="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-2 md:gap-8 mt-8 text-center"
-          >
-            <div class="bg-white p-4 rounded-3xl shadow-lg dark:shadow-inner">
-              <img
-                src="/assets/pedro.jpg"
-                alt="Pedro"
-                class="mx-auto rounded-full"
-              />
-              <h3 class="text-xl font-semibold text-secondary-800 mt-4">
-                Pedro
-              </h3>
-              <p class="mt-2">Desenvolvedor Backend</p>
-            </div>
-            <div class="bg-white p-4 rounded-3xl shadow-lg dark:shadow-inner">
-              <img
-                src="/assets/matheus.jpg"
-                alt="Matheus"
-                class="mx-auto rounded-full"
-              />
-              <h3 class="text-xl font-semibold text-secondary-800 mt-4">
-                Matheus
-              </h3>
-              <p class="mt-2">Desenvolvedor Frontend</p>
-            </div>
-            <div class="bg-white p-4 rounded-3xl shadow-lg dark:shadow-inner">
-              <img
-                src="/assets/wellington.png"
-                alt="Wellington"
-                class="mx-auto rounded-full"
-              />
-              <h3 class="text-xl font-semibold text-secondary-800 mt-4">
-                Wellington
-              </h3>
-              <p class="mt-2">Designer e Tester</p>
-            </div>
-            <div class="bg-white p-4 rounded-3xl shadow-lg dark:shadow-inner">
-              <img
-                src="/assets/brenda.jpg"
-                alt="Brenda"
-                class="mx-auto rounded-full"
-              />
-              <h3 class="text-xl font-semibold text-secondary-800 mt-4">
-                Brenda
-              </h3>
-              <p class="mt-2">Designer e Tester</p>
-            </div>
-          </div>
-        </div>
-      </section>
+      <div class="flex gap-6">
+        <a href="#home" class="text-secondary-800 dark:text-white flex gap-2 items-center hover:text-primary-500"><i
+            class="fa-solid fa-house text-secondary-800 dark:text-primary-500 dark:hover:text-white"></i><span
+            class="hidden md:block mr-2">Home</span></a>
+        <a href="#problema" class="text-secondary-800 dark:text-white flex gap-2 items-center hover:text-primary-500"><i
+            class="fa-solid fa-bug text-secondary-800 dark:text-primary-500 dark:hover:text-white"></i><span
+            class="hidden md:block mr-2">Problema</span></a>
+        <a href="#solucao" class="text-secondary-800 dark:text-white flex gap-2 items-center hover:text-primary-500"><i
+            class="fa-solid fa-lightbulb text-secondary-800 dark:text-primary-500 dark:hover:text-white"></i><span
+            class="hidden md:block mr-2">Solução</span></a>
+        <a href="#equipe" class="text-secondary-800 dark:text-white flex gap-2 items-center hover:text-primary-500"><i
+            class="fa-solid fa-user-group text-secondary-800 dark:text-primary-500 dark:hover:text-white"></i><span
+            class="hidden md:block mr-2">Equipe</span></a>
+      </div>
     </div>
-    <footer class="bg-gray-100 dark:bg-secondary-900 py-6 ">
-      <div class="container mx-auto px-4 md:px-12 flex flex-col md:flex-row justify-between items-center">
-        <div class="flex flex-col md:flex-row items-center gap-2">
-          <img src="/assets/logo.png" alt="What's Your Finances" class="w-10 h-10 rounded-full">
-          <span class="text-primary-500 text-lg font-semibold">What's Your Finances</span>
-        </div>
-        <div class="flex gap-4 mt-4 md:mt-0">
-          <a href="#" class="text-secondary-800 dark:text-white hover:text-primary-500">
-            <i class="fab fa-facebook-f"></i>
-          </a>
-          <a href="#" class="text-secondary-800 dark:text-white hover:text-primary-500">
-            <i class="fab fa-twitter"></i>
-          </a>
-          <a href="#" class="text-secondary-800 dark:text-white hover:text-primary-500">
-            <i class="fab fa-instagram"></i>
-          </a>
-          <a href="#" class="text-secondary-800 dark:text-white hover:text-primary-500">
-            <i class="fab fa-linkedin-in"></i>
-          </a>
-        </div>
-        <div class="mt-4 md:mt-0 text-secondary-800 dark:text-white text-sm">
-          &copy; 2024 What's Your Finances. <br>Todos os direitos reservados.
+  </nav>
+
+  <div class="flex flex-col flex-1">
+    <!-- Home Section -->
+    <section id="home" class="flex-col bg-white dark:bg-primary-800 py-12 px-4 md:px-12 mt-16 items-center">
+      <div class="w-full flex container items-center justify-center ">
+        <img src="/assets/phone-user.png" alt="Brenda" class="w-1/2 md:w-96 rounded-full" />
+        <div class="text-right w-1/2">
+          <h1 class="text-2xl md:text-5xl font-bold text-primary-500">
+            What's Your Finances
+          </h1>
+          <p class="text-md md:text-2xl mt-4 text-secondary-800 dark:text-white">
+            Gerencie suas finanças com facilidade usando o aplicativo mais
+            popular do Brasil
+          </p>
+          <a href="https://drive.google.com/file/d/18xsXkNvhYpic9NmG2zLvzG7lVTnqPy9E/view?usp=sharing"><button
+              class="w-auto mt-8 bg-primary-500 text-white hover:text-white py-3 px-6 rounded-full hover:bg-primary-700 transition animation-pulse">
+              Baixe Agora
+              <i class="fa-solid fa-download ml-2"></i></button></a>
         </div>
       </div>
-    </footer>
-    
-  </body>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            primary: {
-              100: "#F1FFF3",
-              200: "#DFF7E2",
-              300: "#99ecd8",
-              500: "#00D09E",
-              600: "#00B17F",
-              700: "#004F3E",
-              800: "#052224",
-              900: "#031416",
-            },
+      <div></div>
+    </section>
 
-            secondary: {
-              200: "#9F5FED",
-              300: "#8650C7",
-              400: "#6D41A1",
-              500: "#47286C",
-              600: "#2E1C56",
-              800: "#2E1A46",
-              900: "#150C20",
-            },
+    <section id="download" class="flex-col bg-white dark:bg-primary-800 py-12 px-4 md:px-12 mt-16 items-center">
+      <div class="w-full flex container items-center justify-center ">
+        <img src="/assets/phone-user.png" alt="Brenda" class="w-1/2 md:w-96 rounded-full" />
+        <div class="text-right w-1/2">
+          <h1 class="text-2xl md:text-5xl font-bold text-primary-500">
+            What's Your Finances
+          </h1>
+          <p class="text-md md:text-2xl mt-4 text-secondary-800 dark:text-white">
+            Gerencie suas finanças com facilidade usando o aplicativo mais
+            popular do Brasil
+          </p>
+          <a href="https://drive.google.com/file/d/18xsXkNvhYpic9NmG2zLvzG7lVTnqPy9E/view?usp=sharing"><button
+              class="w-auto mt-8 bg-primary-500 text-white hover:text-white py-3 px-6 rounded-full hover:bg-primary-700 transition animation-pulse">
+              Baixe Agora
+              <i class="fa-solid fa-download ml-2"></i></button></a>
+        </div>
+      </div>
+      <div></div>
+    </section>
+
+    <!-- Problema Section -->
+    <section id="problema" class="bg-primary-500 dark:bg-secondary-800 py-12 px-4 md:px-12">
+      <div class="container mx-auto text-left">
+        <h2 class="text-3xl font-bold text-white dark:text-primary-500">O Problema</h2>
+        <p class="text-xl font-semibold text-secondary-800 dark:text-white">Quais são as principais dores?</p>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-8 mt-8">
+          <div class="bg-white p-6 rounded-3xl shadow-lg dark:shadow-inner ">
+            <h3 class="text-xl font-semibold text-secondary-800">
+              Mais endividados
+            </h3>
+            <p class="mt-4">
+              Mais de 66 milhões de pessoas enfrentam o desafio de ter o nome
+              negativado.
+            </p>
+          </div>
+          <div class="bg-white p-6 rounded-3xl shadow-lg dark:shadow-inner">
+            <h3 class="text-xl font-semibold text-secondary-800">
+              Menos controle financeiro
+            </h3>
+            <p class="mt-4">
+              29% admitem já ter sido negativados por falta de pagamento da
+              fatura do cartão.
+            </p>
+          </div>
+          <div class="bg-white p-6 rounded-3xl shadow-lg dark:shadow-inner">
+            <h3 class="text-xl font-semibold text-secondary-800">
+              Praticidade na gestão
+            </h3>
+            <p class="mt-4">
+              Brasileiros têm conhecimento mínimo sobre como controlar suas
+              finanças, mas falham na prática.
+            </p>
+          </div>
+          <div class="bg-white p-6 rounded-3xl shadow-lg dark:shadow-inner">
+            <h3 class="text-xl font-semibold text-secondary-800">
+              Complexidade
+            </h3>
+            <p class="mt-4">
+              Grande parte dos usuários acham os aplicativos muito complicados
+              ou com uma curva de aprendizado desafiadora.
+            </p>
+          </div>
+          <div class="bg-white p-6 rounded-3xl shadow-lg dark:shadow-inner">
+            <h3 class="text-xl font-semibold text-secondary-800">
+              Usabilidade
+            </h3>
+            <p class="mt-4">
+              Geralmente o design do aplicativo não é intuitivo ou a interface
+              é difícil de navegar, levando à desistência.
+            </p>
+          </div>
+          <div class="bg-white p-6 rounded-3xl shadow-lg dark:shadow-inner">
+            <h3 class="text-xl font-semibold text-secondary-800">Tempo</h3>
+            <p class="mt-4">
+              O esforço para inserir dados manualmente geralmente é visto como
+              uma tarefa árdua e desanimadora.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Solução Section -->
+    <section id="solucao" class="bg-gray-100 dark:bg-primary-800 py-12 px-4 md:px-12">
+      <div class="container mx-auto items-center justify-center gap-8 ">
+        <div class="text-center">
+          <h2 class="text-3xl font-bold text-primary-500">A Solução</h2>
+          <p class="text-xl dark:text-white">
+            Observando essas dores, surge o What's your Finance! A sua IA
+            financeira.
+          </p>
+        </div>
+
+
+        <div class="md:flex justify-center items-center mt-4 text-center">
+          <img src="/assets/solution.png" alt="Brenda" class="w-full md:w-60 rounded-full" />
+          <p class="text-secondary-800 dark:text-white md:w-1/3">
+            Recebemos suas movimentações e organizamos para você! <br><br>Com apenas
+            uma mensagem de texto, áudio ou foto, a nossa IA entende sua
+            movimentação e registra no nosso aplicativo para você consultar
+            quando e onde quiser.
+          </p>
+        </div>
+
+      </div>
+  </div>
+  </section>
+
+  <!-- Equipe Section -->
+  <section id="equipe" class="bg-primary-500 dark:bg-secondary-800 py-12 px-4 md:px-12">
+    <div class="container mx-auto">
+      <h2 class="text-3xl font-bold text-white dark:text-primary-500">Nosso time</h2>
+      <p class="text-xl text-secondary-100 dark:text-white">Conheça nosso time</p>
+      <div class="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-2 md:gap-8 mt-8 text-center">
+        <div class="bg-white p-4 rounded-3xl shadow-lg dark:shadow-inner">
+          <img src="/assets/pedro.jpg" alt="Pedro" class="mx-auto rounded-full" />
+          <h3 class="text-xl font-semibold text-secondary-800 mt-4">
+            Pedro
+          </h3>
+          <p class="mt-2">Desenvolvedor Backend</p>
+        </div>
+        <div class="bg-white p-4 rounded-3xl shadow-lg dark:shadow-inner">
+          <img src="/assets/matheus.jpg" alt="Matheus" class="mx-auto rounded-full" />
+          <h3 class="text-xl font-semibold text-secondary-800 mt-4">
+            Matheus
+          </h3>
+          <p class="mt-2">Desenvolvedor Frontend</p>
+        </div>
+        <div class="bg-white p-4 rounded-3xl shadow-lg dark:shadow-inner">
+          <img src="/assets/wellington.png" alt="Wellington" class="mx-auto rounded-full" />
+          <h3 class="text-xl font-semibold text-secondary-800 mt-4">
+            Wellington
+          </h3>
+          <p class="mt-2">Designer e Tester</p>
+        </div>
+        <div class="bg-white p-4 rounded-3xl shadow-lg dark:shadow-inner">
+          <img src="/assets/brenda.jpg" alt="Brenda" class="mx-auto rounded-full" />
+          <h3 class="text-xl font-semibold text-secondary-800 mt-4">
+            Brenda
+          </h3>
+          <p class="mt-2">Designer e Tester</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  </div>
+  <footer class="bg-gray-100 dark:bg-secondary-900 py-6 ">
+    <div class="container mx-auto px-4 md:px-12 flex flex-col md:flex-row justify-between items-center">
+      <div class="flex flex-col md:flex-row items-center gap-2">
+        <img src="/assets/logo.png" alt="What's Your Finances" class="w-10 h-10 rounded-full">
+        <span class="text-primary-500 text-lg font-semibold">What's Your Finances</span>
+      </div>
+      <div class="flex gap-4 mt-4 md:mt-0">
+        <a href="#" class="text-secondary-800 dark:text-white hover:text-primary-500">
+          <i class="fab fa-facebook-f"></i>
+        </a>
+        <a href="#" class="text-secondary-800 dark:text-white hover:text-primary-500">
+          <i class="fab fa-twitter"></i>
+        </a>
+        <a href="#" class="text-secondary-800 dark:text-white hover:text-primary-500">
+          <i class="fab fa-instagram"></i>
+        </a>
+        <a href="#" class="text-secondary-800 dark:text-white hover:text-primary-500">
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+      </div>
+      <div class="mt-4 md:mt-0 text-secondary-800 dark:text-white text-sm">
+        &copy; 2024 What's Your Finances. <br>Todos os direitos reservados.
+      </div>
+    </div>
+  </footer>
+
+</body>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          primary: {
+            100: "#F1FFF3",
+            200: "#DFF7E2",
+            300: "#99ecd8",
+            500: "#00D09E",
+            600: "#00B17F",
+            700: "#004F3E",
+            800: "#052224",
+            900: "#031416",
+          },
+
+          secondary: {
+            200: "#9F5FED",
+            300: "#8650C7",
+            400: "#6D41A1",
+            500: "#47286C",
+            600: "#2E1C56",
+            800: "#2E1A46",
+            900: "#150C20",
           },
         },
       },
-    };
-  </script>
+    },
+  };
+</script>
+
 </html>
