@@ -54,6 +54,17 @@
     ::-webkit-scrollbar-thumb {
       background: transparent;
     }
+
+    .swiper {
+      width: 100%;
+      padding: 2rem 0;
+    }
+
+    .swiper-slide {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
   </style>
 
   <body class="bg-primary-100 dark:bg-primary-800">
@@ -305,50 +316,51 @@
               </p>
             </div>
           </div>
-        </div>
-        <!-- Swiper -->
-        <div class="swiper mySwiper mt-8">
-          <div class="swiper-wrapper">
-            <!-- Slide 1 -->
-            <div class="swiper-slide">
-              <div class="bg-white p-6 rounded-lg shadow-lg">
-                <h4 class="text-xl font-bold text-primary-500">
-                  Praticidade no envio de dados
-                </h4>
-                <p class="mt-4 text-secondary-800">
-                  Envie suas transações financeiras diretamente pelo WhatsApp
-                  com facilidade.
-                </p>
+
+          <!-- Swiper -->
+          <div class="swiper mySwiper mt-8">
+            <div class="swiper-wrapper">
+              <!-- Slide 1 -->
+              <div class="swiper-slide">
+                <div class="bg-white p-6 rounded-lg shadow-lg">
+                  <h4 class="text-xl font-bold text-primary-500">
+                    Praticidade no envio de dados
+                  </h4>
+                  <p class="mt-4 text-secondary-800">
+                    Envie suas transações financeiras diretamente pelo WhatsApp
+                    com facilidade.
+                  </p>
+                </div>
               </div>
-            </div>
-            <!-- Slide 2 -->
-            <div class="swiper-slide">
-              <div class="bg-white p-6 rounded-lg shadow-lg">
-                <h4 class="text-xl font-bold text-primary-500">
-                  Resumo das atividades
-                </h4>
-                <p class="mt-4 text-secondary-800">
-                  Receba um resumo organizado das suas atividades financeiras no
-                  aplicativo.
-                </p>
+              <!-- Slide 2 -->
+              <div class="swiper-slide">
+                <div class="bg-white p-6 rounded-lg shadow-lg">
+                  <h4 class="text-xl font-bold text-primary-500">
+                    Resumo das atividades
+                  </h4>
+                  <p class="mt-4 text-secondary-800">
+                    Receba um resumo organizado das suas atividades financeiras
+                    no aplicativo.
+                  </p>
+                </div>
               </div>
-            </div>
-            <!-- Slide 3 -->
-            <div class="swiper-slide">
-              <div class="bg-white p-6 rounded-lg shadow-lg">
-                <h4 class="text-xl font-bold text-primary-500">
-                  Controle de gastos
-                </h4>
-                <p class="mt-4 text-secondary-800">
-                  Melhore o controle dos seus gastos com informações detalhadas
-                  e organizadas.
-                </p>
+              <!-- Slide 3 -->
+              <div class="swiper-slide">
+                <div class="bg-white p-6 rounded-lg shadow-lg">
+                  <h4 class="text-xl font-bold text-primary-500">
+                    Controle de gastos
+                  </h4>
+                  <p class="mt-4 text-secondary-800">
+                    Melhore o controle dos seus gastos com informações
+                    detalhadas e organizadas.
+                  </p>
+                </div>
               </div>
+              <!-- Add more slides as needed -->
             </div>
-            <!-- Add more slides as needed -->
+            <!-- Add Pagination -->
+            <div class="swiper-pagination"></div>
           </div>
-          <!-- Add Pagination -->
-          <div class="swiper-pagination"></div>
         </div>
       </section>
 
@@ -522,6 +534,7 @@
         </div>
       </div>
     </footer>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
   </body>
   <script>
     tailwind.config = {
@@ -552,5 +565,14 @@
         },
       },
     };
+  </script>
+  <script>
+    var swiper = new Swiper(".mySwiper", {
+      spaceBetween: 30,
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+    });
   </script>
 </html>
