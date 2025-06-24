@@ -93,15 +93,8 @@ document.addEventListener("DOMContentLoaded", () => {
     };
     window.addEventListener("scroll", handleScroll);
 
-    // Mobile Menu Button (only the open button is in the navbar)
-    const mobileMenu = document.getElementById("mobileMenu");
-    const mobileMenuOverlay = document.getElementById("mobileMenuOverlay");
-    if (mobileMenuButton && mobileMenu && mobileMenuOverlay) {
-      mobileMenuButton.addEventListener("click", () => {
-        mobileMenu.classList.remove("translate-x-full");
-        mobileMenuOverlay.classList.remove("hidden");
-      });
-    }
+    // The logic for the mobile menu open button is now in initializeMobileMenu
+    // to ensure all menu components exist before adding the event listener.
   };
 
   // --- Mobile Menu Logic ---
@@ -111,6 +104,14 @@ document.addEventListener("DOMContentLoaded", () => {
     const closeMobileMenuButton = document.getElementById("closeMobileMenuButton");
     const mobileNavLinks = mobileMenu ? mobileMenu.querySelectorAll('a') : [];
     const themeToggleButtonMobile = document.getElementById("themeToggleMobile");
+    const mobileMenuButton = document.getElementById("mobileMenuButton"); // Get the open button from the navbar
+
+    const openMenu = () => {
+      if (mobileMenu && mobileMenuOverlay) {
+        mobileMenu.classList.remove("translate-x-full");
+        mobileMenuOverlay.classList.remove("hidden");
+      }
+    };
 
     const closeMenu = () => {
       if (mobileMenu && mobileMenuOverlay) {
@@ -119,6 +120,7 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     };
 
+    if (mobileMenuButton) mobileMenuButton.addEventListener("click", openMenu);
     if (closeMobileMenuButton) closeMobileMenuButton.addEventListener("click", closeMenu);
     if (mobileMenuOverlay) mobileMenuOverlay.addEventListener("click", closeMenu);
     mobileNavLinks.forEach(link => {
