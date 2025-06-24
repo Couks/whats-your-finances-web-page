@@ -90,3 +90,51 @@ html {
     transform: scale(1);
   }
 }
+
+.nav-link {
+  color: #4a5568;
+  transition: color 0.2s;
+  position: relative;
+}
+.nav-link:hover {
+  color: #00D09E;
+}
+.dark .nav-link {
+  color: #d1d5db;
+}
+.dark .nav-link:hover {
+  color: #00D09E;
+}
+.nav-link::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  height: 2px;
+  width: 0;
+  background-color: #00D09E;
+  transition: width 0.3s;
+}
+.nav-link:hover::after {
+  width: 100%;
+}
+
+.mobile-nav-link {
+  display: block;
+  padding: 0.75rem 1.5rem;
+  color: #374151;
+  transition: background-color 0.2s, color 0.2s;
+}
+.mobile-nav-link:hover {
+  background-color: #F1FFF3;
+}
+.dark .mobile-nav-link {
+  color: #e5e7eb;
+}
+.dark .mobile-nav-link:hover {
+  background-color: #2E1A46;
+}
+
+.faq-answer.open {
+  max-height: 500px;
+}
