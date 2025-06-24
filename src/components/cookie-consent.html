@@ -1,31 +1,33 @@
-<div
-  id="cookieConsent"
-  class="fixed bottom-0 left-0 w-full bg-white dark:bg-secondary-800 p-4 shadow-lg z-50 hidden flex-col lg:flex-row justify-between items-center border-t border-neutral-200 dark:border-secondary-700"
->
+<div id="cookieConsent" class="fixed bottom-0 left-0 right-0 z-50 hidden">
   <div
-    class="max-w-7xl mx-auto flex flex-col lg:flex-row justify-between items-center"
+    class="bg-white/80 dark:bg-secondary-900/80 backdrop-blur-md shadow-lg border-t border-neutral-200/50 dark:border-secondary-700/50"
   >
-    <p
-      class="text-sm lg:text-base text-neutral-700 dark:text-neutral-200 mb-4 lg:mb-0"
-    >
-      Este site usa cookies para melhorar a experiência do usuário.
-      <a href="#" class="text-primary-600 hover:underline"
-        >Leia mais</a
-      >.
-    </p>
-    <div class="flex gap-3">
-      <button
-        id="acceptCookies"
-        class="bg-primary-500 hover:bg-primary-600 text-white px-4 py-2 rounded-lg transition-colors"
-      >
-        Aceitar
-      </button>
-      <button
-        id="declineCookies"
-        class="bg-neutral-200 hover:bg-neutral-300 text-neutral-800 px-4 py-2 rounded-lg transition-colors dark:bg-secondary-700 dark:hover:bg-secondary-600 dark:text-neutral-200"
-      >
-        Recusar
-      </button>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+      <div class="flex flex-col md:flex-row items-center justify-between gap-4">
+        <p
+          class="text-sm text-neutral-800 dark:text-neutral-200 text-center md:text-left"
+        >
+          Nós usamos cookies para analisar o tráfego e melhorar sua experiência.
+          Ao continuar, você concorda com nosso uso de cookies.
+          <a href="#" class="font-semibold text-primary-600 hover:underline"
+            >Saiba mais</a
+          >.
+        </p>
+        <div class="flex items-center gap-3 flex-shrink-0">
+          <button
+            id="declineCookies"
+            class="px-5 py-2 text-sm font-bold text-neutral-700 dark:text-neutral-300 hover:bg-neutral-200/60 dark:hover:bg-secondary-700/60 rounded-full transition-colors"
+          >
+            Recusar
+          </button>
+          <button
+            id="acceptCookies"
+            class="bg-primary-500 hover:bg-primary-600 text-white text-sm font-bold px-5 py-2 rounded-full transition-transform duration-300 transform hover:scale-105 shadow-md"
+          >
+            Aceitar
+          </button>
+        </div>
+      </div>
     </div>
   </div>
-</div> 
+</div>
