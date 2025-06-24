@@ -32,6 +32,7 @@ document.addEventListener("DOMContentLoaded", () => {
     { id: "download-container", url: "src/components/download.html" },
     { id: "cookie-consent-container", url: "src/components/cookie-consent.html" },
     { id: "footer-container", url: "src/components/footer.html" },
+    { id: "mobile-menu-container", url: "src/components/mobile-menu.html" },
   ];
 
   components.forEach(component => {
@@ -45,24 +46,49 @@ document.addEventListener("DOMContentLoaded", () => {
     const closeMobileMenuButton = document.getElementById("closeMobileMenuButton");
     const mobileMenu = document.getElementById("mobileMenu");
     const mobileMenuOverlay = document.getElementById("mobileMenuOverlay");
-    const mobileNavLinks = mobileMenu.querySelectorAll('a');
+    const mobileNavLinks = mobileMenu ? mobileMenu.querySelectorAll('a') : [];
     const themeToggleButton = document.getElementById("themeToggle");
+    const themeToggleButtonMobile = document.getElementById("themeToggleMobile");
     const htmlElement = document.documentElement;
 
     // --- Theme Toggler ---
     const storedTheme = localStorage.getItem('theme');
 
+    const updateThemeIcons = (isDark) => {
+      const sunIcon = `<i class="fa-solid fa-sun text-xl"></i>`;
+      const moonIcon = `<i class="fa-solid fa-moon text-xl hidden"></i>`;
+      const sunIconMobile = `<i class="fa-solid fa-sun text-2xl"></i><span class="sr-only">Tema Claro</span>`;
+      const moonIconMobile = `<i class="fa-solid fa-moon text-2xl"></i><span class="sr-only">Tema Escuro</span>`;
+
+      if (themeToggleButton) {
+        const sun = themeToggleButton.querySelector('.fa-sun');
+        const moon = themeToggleButton.querySelector('.fa-moon');
+        if (sun && moon) {
+          sun.style.display = isDark ? 'none' : 'block';
+          moon.style.display = isDark ? 'block' : 'none';
+        }
+      }
+      if (themeToggleButtonMobile) {
+        themeToggleButtonMobile.innerHTML = isDark ? moonIconMobile : sunIconMobile;
+      }
+    };
+
+    const toggleTheme = () => {
+      const isDark = htmlElement.classList.toggle('dark');
+      localStorage.setItem('theme', isDark ? 'dark' : 'light');
+      updateThemeIcons(isDark);
+    };
+
     // Set theme on initial load
-    if (storedTheme === 'dark' || (!storedTheme && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-      htmlElement.classList.add('dark');
-    }
+    const initialIsDark = storedTheme === 'dark' || (!storedTheme && window.matchMedia('(prefers-color-scheme: dark)').matches);
+    htmlElement.classList.toggle('dark', initialIsDark);
+    updateThemeIcons(initialIsDark);
 
     if (themeToggleButton) {
-      themeToggleButton.addEventListener('click', () => {
-        htmlElement.classList.toggle('dark');
-        const isDark = htmlElement.classList.contains('dark');
-        localStorage.setItem('theme', isDark ? 'dark' : 'light');
-      });
+      themeToggleButton.addEventListener('click', toggleTheme);
+    }
+    if (themeToggleButtonMobile) {
+      themeToggleButtonMobile.addEventListener('click', toggleTheme);
     }
 
     // Sticky Header
@@ -78,14 +104,12 @@ document.addEventListener("DOMContentLoaded", () => {
     const openMenu = () => {
       mobileMenu.classList.remove("translate-x-full");
       mobileMenuOverlay.classList.remove("hidden");
-      mobileMenuOverlay.classList.add("z-10");
     };
 
     const closeMenu = () => {
       mobileMenu.classList.add("translate-x-full");
       setTimeout(() => {
         mobileMenuOverlay.classList.add("hidden");
-        mobileMenuOverlay.classList.remove("z-10");
       }, 300);
     };
 
@@ -109,6 +133,21 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
     observer.observe(navbarContainer, { childList: true, subtree: true });
+  }
+
+  // Separate observer for the mobile menu, as it's in a different container now.
+  const mobileMenuContainer = document.getElementById('mobile-menu-container');
+  if (mobileMenuContainer) {
+    const observer = new MutationObserver((mutationsList, observer) => {
+      // We still initialize the logic from the navbar observer,
+      // but we need to wait for the menu elements to exist.
+      // This check is redundant if the navbar loads first, but it's safe.
+      if (document.getElementById('mobileMenu')) {
+        initializeNavbar();
+        observer.disconnect();
+      }
+    });
+    observer.observe(mobileMenuContainer, { childList: true, subtree: true });
   }
 
   // --- FAQ Accordion Logic ---
